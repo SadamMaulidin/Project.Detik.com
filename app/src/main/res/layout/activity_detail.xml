@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.DetailActivity">
+
+    <ImageView
+        android:id="@+id/img_news_detil"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:scaleType="fitXY"
+        android:src="@mipmap/ic_launcher"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cv_details"
+        android:layout_width="180dp"
+        android:layout_height="60dp"
+        android:layout_marginEnd="10dp"
+        android:orientation="vertical"
+        app:cardCornerRadius="8dp"
+        app:layout_constraintBottom_toBottomOf="@id/img_news_detil"
+        app:layout_constraintEnd_toEndOf="@id/img_news_detil"
+        app:layout_constraintTop_toBottomOf="@+id/img_news_detil">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            >
+
+            <TextView
+                android:id="@+id/tvWriterDetails"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_gravity="center"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp"
+                android:text="Author"
+                android:textColor="#000000"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvPublishDateDetails"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_gravity="center"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp"
+                android:text="Publish Date"
+                android:textSize="16sp" />
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/tvNewsTitleDetails"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Ceritanya ini judulny"
+        android:textColor="#000000"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:textSize="24sp"
+        app:layout_constraintTop_toBottomOf="@id/img_news_detil"
+        android:layout_marginTop="38dp"/>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        app:layout_constraintTop_toBottomOf="@id/tvNewsTitleDetails"
+        app:cardCornerRadius="8dp">
+
+        <TextView
+            android:id="@+id/tvContentDetails"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="ceritanya ini ntar detailny"
+            android:textSize="16sp"
+            android:layout_margin="8dp"
+            android:textColor="#000000"/>
+
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
